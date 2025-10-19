@@ -193,3 +193,103 @@ footer p {
         font-size: 11px;
     }
 }
+
+/* 呼吸动效样式 */
+.breath-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 40px auto 0;
+}
+
+.breath-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    animation: breathe 8s infinite ease-in-out;
+    z-index: 3;
+}
+
+.circle-2 {
+    width: 150px;
+    height: 150px;
+    animation: breathe 6s infinite ease-in-out;
+    animation-delay: -1s;
+    z-index: 2;
+}
+
+.circle-3 {
+    width: 100px;
+    height: 100px;
+    animation: breathe 4s infinite ease-in-out;
+    animation-delay: -2s;
+    z-index: 1;
+}
+
+.pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    z-index: 4;
+    animation: pulse 4s infinite ease-in-out;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.3;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.5;
+    }
+}
+
+/* 呼吸动效响应式设计 */
+@media (max-width: 600px) {
+    .breath-container {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .circle-1 {
+        width: 170px;
+        height: 170px;
+    }
+    
+    .circle-2 {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .circle-3 {
+        width: 90px;
+        height: 90px;
+    }
+}
