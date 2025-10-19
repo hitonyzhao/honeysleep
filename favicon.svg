@@ -1,0 +1,15 @@
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Courier+New:wght@400;700&display=swap');
+    .logo-text {
+      font-family: 'Courier New', monospace;
+      font-size: 8px;
+      font-weight: normal;
+      fill: #ffffff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  </style>
+  <text x="2" y="10" class="logo-text">HONEY</text>
+  <text x="2" y="24" class="logo-text">SLEEP</text>
+</svg>
