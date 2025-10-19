@@ -194,102 +194,98 @@ footer p {
     }
 }
 
-/* 呼吸动效样式 */
+/* 柔和深色呼吸云团样式 */
 .breath-container {
     position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 40px auto 0;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.breath-circle {
+.breath-cloud {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    filter: blur(15px);
 }
 
-.circle-1 {
-    width: 200px;
-    height: 200px;
-    animation: breathe 8s infinite ease-in-out;
+.cloud-1 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(120, 120, 120, 0.5) 0%, rgba(120, 120, 120, 0.05) 70%);
+    animation: breathe 4s infinite ease-in-out;
     z-index: 3;
 }
 
-.circle-2 {
-    width: 150px;
-    height: 150px;
-    animation: breathe 6s infinite ease-in-out;
-    animation-delay: -1s;
+.cloud-2 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(100, 100, 100, 0.4) 0%, rgba(100, 100, 100, 0.04) 70%);
+    animation: breathe 4s infinite ease-in-out;
+    animation-delay: 0.1s;
     z-index: 2;
 }
 
-.circle-3 {
-    width: 100px;
-    height: 100px;
+.cloud-3 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(80, 80, 80, 0.3) 0%, rgba(80, 80, 80, 0.03) 70%);
     animation: breathe 4s infinite ease-in-out;
-    animation-delay: -2s;
+    animation-delay: 0.2s;
     z-index: 1;
 }
 
-.pulse {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    z-index: 4;
-    animation: pulse 4s infinite ease-in-out;
+/* 确保标题在呼吸效果上方 */
+.breath-container h2 {
+    position: relative;
+    z-index: 10;
+    margin: 0;
+    text-align: center;
 }
 
 @keyframes breathe {
-    0%, 100% {
+    0% {
         transform: translate(-50%, -50%) scale(1);
-        opacity: 0.7;
+        opacity: 0.2;
     }
-    50% {
-        transform: translate(-50%, -50%) scale(1.5);
-        opacity: 0.3;
-    }
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1.5);
+    40% {
+        transform: translate(-50%, -50%) scale(1.8);
         opacity: 0.5;
     }
+    60% {
+        transform: translate(-50%, -50%) scale(1.8);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.2;
+    }
 }
 
-/* 呼吸动效响应式设计 */
-@media (max-width: 600px) {
+/* 柔和深色呼吸云团响应式设计 */
+@media (max-width: 700px) {
     .breath-container {
-        width: 250px;
-        height: 250px;
+        width: 450px;
+        height: 450px;
     }
     
-    .circle-1 {
-        width: 170px;
-        height: 170px;
+    .cloud-1 {
+        width: 220px;
+        height: 220px;
     }
     
-    .circle-2 {
-        width: 130px;
-        height: 130px;
+    .cloud-2 {
+        width: 180px;
+        height: 180px;
     }
     
-    .circle-3 {
-        width: 90px;
-        height: 90px;
+    .cloud-3 {
+        width: 140px;
+        height: 140px;
     }
 }
