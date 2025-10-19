@@ -181,8 +181,31 @@ footer p {
         font-size: 14px;
     }
     
-    .hero h2 {
+    .breath-container {
+        width: 100%;
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .cloud-1 {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .cloud-2 {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .cloud-3 {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .breath-container h2 {
         font-size: 24px;
+        white-space: normal;
+        line-height: 1.3;
     }
     
     footer {
@@ -247,7 +270,7 @@ footer p {
     margin: 0;
     text-align: center;
     white-space: nowrap;
-    font-size: 32px;
+    font-size: 42px;
     font-weight: 300;
 }
 
@@ -301,7 +324,7 @@ footer p {
     }
     
     .breath-container h2 {
-        font-size: 28px;
+        font-size: 36px;
         white-space: normal;
     }
 }
@@ -325,5 +348,9 @@ footer p {
     .cloud-3 {
         width: 160px;
         height: 160px;
+    }
+    
+    .breath-container h2 {
+        font-size: 30px;
     }
 }
