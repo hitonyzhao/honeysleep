@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: #0a0a0a;
@@ -13,6 +17,9 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -116,12 +123,13 @@ header .container {
 
 /* 英雄区域样式 */
 .hero {
-    height: 100vh;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
+    min-height: calc(100vh - 120px); /* 减去header和footer的大概高度 */
 }
 
 .hero h2 {
@@ -134,12 +142,10 @@ header .container {
 
 /* 页脚样式 */
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
     padding: 40px 0;
     text-align: center;
+    margin-top: auto;
 }
 
 footer p {
@@ -160,14 +166,24 @@ footer p {
 @media (max-width: 768px) {
     header {
         padding: 30px 0;
+        position: relative;
+        top: 0;
+        z-index: 100;
     }
     
     .hero h2 {
         font-size: 28px;
     }
     
+    .hero {
+        min-height: calc(100vh - 100px); /* 移动端调整 */
+        padding: 60px 0 40px;
+    }
+    
     footer {
         padding: 30px 0;
+        position: relative;
+        bottom: 0;
     }
 }
 
@@ -175,16 +191,24 @@ footer p {
 @media (max-width: 480px) {
     header {
         padding: 20px 0;
+        position: relative;
+        top: 0;
+        z-index: 100;
     }
     
     .logo {
         font-size: 14px;
     }
     
+    .hero {
+        min-height: calc(100vh - 80px); /* 小屏幕调整 */
+        padding: 40px 0 30px;
+    }
+    
     .breath-container {
         width: 100%;
         height: auto;
-        padding: 40px 20px;
+        padding: 30px 15px;
     }
     
     .cloud-1 {
@@ -206,10 +230,13 @@ footer p {
         font-size: 24px;
         white-space: normal;
         line-height: 1.3;
+        margin: 20px 0;
     }
     
     footer {
         padding: 20px 0;
+        position: relative;
+        bottom: 0;
     }
     
     footer p {
