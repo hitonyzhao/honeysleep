@@ -197,8 +197,8 @@ footer p {
 /* 柔和深色呼吸云团样式 */
 .breath-container {
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -215,16 +215,16 @@ footer p {
 }
 
 .cloud-1 {
-    width: 300px;
-    height: 300px;
+    width: 450px;
+    height: 450px;
     background: radial-gradient(circle, rgba(120, 120, 120, 0.5) 0%, rgba(120, 120, 120, 0.05) 70%);
     animation: breathe 4s infinite ease-in-out;
     z-index: 3;
 }
 
 .cloud-2 {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     background: radial-gradient(circle, rgba(100, 100, 100, 0.4) 0%, rgba(100, 100, 100, 0.04) 70%);
     animation: breathe 4s infinite ease-in-out;
     animation-delay: 0.1s;
@@ -232,8 +232,8 @@ footer p {
 }
 
 .cloud-3 {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background: radial-gradient(circle, rgba(80, 80, 80, 0.3) 0%, rgba(80, 80, 80, 0.03) 70%);
     animation: breathe 4s infinite ease-in-out;
     animation-delay: 0.2s;
@@ -246,6 +246,17 @@ footer p {
     z-index: 10;
     margin: 0;
     text-align: center;
+    white-space: nowrap;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.hero-title {
+    position: relative;
+    z-index: 10;
+    white-space: nowrap;
+    overflow: visible;
+    margin: 0 auto;
 }
 
 @keyframes breathe {
@@ -268,6 +279,33 @@ footer p {
 }
 
 /* 柔和深色呼吸云团响应式设计 */
+@media (max-width: 900px) {
+    .breath-container {
+        width: 600px;
+        height: 600px;
+    }
+    
+    .cloud-1 {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .cloud-2 {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .cloud-3 {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .breath-container h2 {
+        font-size: 28px;
+        white-space: normal;
+    }
+}
+
 @media (max-width: 700px) {
     .breath-container {
         width: 450px;
@@ -275,17 +313,17 @@ footer p {
     }
     
     .cloud-1 {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .cloud-2 {
         width: 220px;
         height: 220px;
     }
     
-    .cloud-2 {
-        width: 180px;
-        height: 180px;
-    }
-    
     .cloud-3 {
-        width: 140px;
-        height: 140px;
+        width: 160px;
+        height: 160px;
     }
 }
