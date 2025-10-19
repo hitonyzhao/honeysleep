@@ -1,5 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
-  <rect width="100%" height="100%" fill="black"/>
-  <text x="50%" y="30%" font-family="Arial, sans-serif" font-size="60" font-weight="bold" text-anchor="middle" fill="white">HONEY</text>
-  <text x="50%" y="70%" font-family="Arial, sans-serif" font-size="60" font-weight="bold" text-anchor="middle" fill="white">SLEEP</text>
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Courier+New:wght@400;700&display=swap');
+    .logo-letter {
+      font-family: 'Courier New', monospace;
+      font-size: 48px;
+      font-weight: bold;
+      fill: #000000;
+      text-transform: uppercase;
+    }
+  </style>
+  <text x="8" y="52" class="logo-letter">H</text>
 </svg>
