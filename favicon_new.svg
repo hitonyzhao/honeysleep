@@ -1,0 +1,9 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="16" height="16" fill="white" rx="1" ry="1"/>
+  <!-- 左边竖线 -->
+  <rect x="5" y="2" width="3" height="12" fill="black"/>
+  <!-- 中间横线 -->
+  <rect x="3" y="7" width="10" height="3" fill="black"/>
+  <!-- 右边竖线 -->
+  <rect x="8" y="2" width="3" height="12" fill="black"/>
+</svg>
