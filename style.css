@@ -102,6 +102,20 @@ header .container {
   align-items: center;
 }
 
+.hero .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .logo {
   font-family: 'Courier Prime', monospace;
   color: #fff;
